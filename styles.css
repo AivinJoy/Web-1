@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75,300..800;1,75,300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
     --bg-color: #ffffff;
@@ -18,6 +18,7 @@ html, body{
     min-height: 100vh;
     background-color: #ffffff;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .container{
@@ -45,9 +46,9 @@ html, body{
 
 .company-name{
     padding: 10px 10px;
-    font-family: "Open Sans", sans-serif;
-    font-weight: semi-bold;
-    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight:500;
+    font-size: 22px;
 }
 
 .company-logo {
@@ -65,9 +66,9 @@ html, body{
 }
 
 .nav-links ul {
-    font-family: "Red Hat Text", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 15px;
-    font-weight: Regular 400;
+    font-weight: 450;
     list-style: none;
     display: flex;
     margin: 0;
@@ -142,11 +143,14 @@ html, body{
     height: 100%;
     object-fit: cover;
     bottom: 20px;
-    filter: brightness(0.85);
+    filter: brightness(0.75);
     display: block;
 }
 
 .hero-heading{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 120px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -172,15 +176,18 @@ html, body{
 }
 
 .info-box{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 12px;
-    max-width: 300px;
-    font-size: 0.9rem;
+    max-width: 400px;
+    font-size: 16px;
     backdrop-filter: blur(5px);
 }
 
 .info-box p {
+    line-height: 25px;
     color: var(--text-color);
 }
 
@@ -247,3 +254,229 @@ html, body{
     height: auto;
     display: block;
 } */
+
+.abt-container {
+    display: grid;
+    height: 100vh;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: minmax(300px, 1fr) minmax(200px, 1fr) minmax(100px, 1fr); 
+    gap: 15px;
+    border-radius: 20px;
+}
+
+.abt-img {
+    position: relative;
+    /* background-color: blue; */
+    /* border: 2px solid maroon; */
+    grid-row: span 2;
+    grid-column: span 1;
+    overflow: hidden;
+}
+
+.living-room {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    /* clip-path: path("M 20 0 A 20 20 0 0 0 0 20 L 0 490 A 20 20 0 0 0 21 510 L 220 510 A 20 20 0 0 1 240 530 L 240 570 A 20 20 0 0 0 260 590 L 310 590 A 20 20 0 0 1 330 610 L 330 650 A 20 20 0 0 0 350 670 L 395 670 A 20 20 0 0 1 415 690 L 415 734 A 20 20 0 0 0 435 753 L 1210 753 A 20 20 0 0 0 1231 735 L 1231 20 A 20 20 0 0 0 1210 0 Z"); */
+    /* clip-path: path("M 20 0 A 20 20 0 0 0 0 20 L 0 330 A 20 20 0 0 0 21 350 L 220 350 A 20 20 0 0 1 240 370 L 240 410 A 20 20 0 0 0 260 430 L 310 430 A 20 20 0 0 1 330 450 L 330 490 A 20 20 0 0 0 350 510 L 395 510 A 20 20 0 0 1 415 530 L 415 574 A 20 20 0 0 0 435 593 L 1210 593 A 20 20 0 0 0 1231 575 L 1231 20 A 20 20 0 0 0 1210 0 Z"); */
+    clip-path: path("M 20 0 A 20 20 0 0 0 0 20 L 0 360 A 20 20 0 0 0 21 380 L 220 380 A 20 20 0 0 1 240 400 L 240 440 A 20 20 0 0 0 260 460 L 310 460 A 20 20 0 0 1 330 480 L 330 520 A 20 20 0 0 0 350 540 L 395 540 A 20 20 0 0 1 415 560 L 415 604 A 20 20 0 0 0 435 623 L 1210 623 A 20 20 0 0 0 1231 605 L 1231 20 A 20 20 0 0 0 1210 0 Z");
+}
+
+.living-room img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
+
+/* .grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; 
+    background-image: 
+        linear-gradient(#ccc 1px, transparent 1px),
+        linear-gradient(90deg, #ccc 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 2;
+} */
+
+.btn-look {
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 12px;
+    gap: 8px;
+    height: 36px;
+    width: auto;
+    left: 30px;
+    bottom: 160px;
+    border: solid 1px black;
+    border-radius: 20px;
+}
+
+.abt-heading1 {
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    left: 30px;
+    bottom: 75px;
+}
+
+.abt-heading2 {
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    left: 30px;
+    bottom: 2px;
+}
+
+/* .abt-info {
+    background-color: black;
+    border: 2px solid green;
+} */
+
+/* .abt2img {
+    background-color: aqua;
+    border: 2px solid red;
+} */
+
+
+
+.abt-info {
+    position: relative;
+    background-color: #EDE8DC;
+    border-radius: 20px;
+}
+
+.abt-cont1 {
+    position: absolute;
+    margin: 40px;
+    top: 5px;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 12px;
+    gap: 8px;
+    height: auto;
+    width: 120px;
+    border: solid 1px black;
+    border-radius: 20px;
+}
+
+.abt-cont2 {
+    position: absolute;
+    margin: 40px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    top: 65px;
+    line-height: 25px;
+}
+
+.abt-cont3 {
+    position: absolute;
+    margin: 40px;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    top: 125px;
+}
+
+.abt2img {
+    position: relative;
+    overflow: hidden;
+}
+
+.outdoor {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.outdoor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* clip-path: path("M 20 0 A 20 20 0 0 0 0 20 L 0 352 A 20 20 0 0 0 21 372.17 L 490 372.2 A 10 10 0 0 0 495 369 A 15 15 0 0 1 616 283 A 10 10 0 0 0 620.32 280 L 620.32 20 A 20 20 0 0 0 600 0 Z"); */
+    /* clip-path: path("M 20 0 A 20 20 0 0 0 0 20 L 0 352 A 20 20 0 0 0 21 372.17 L 490 372.2 A 10 10 0 0 0 500 366 A 15 15 0 0 1 614 290 A 10 10 0 0 0 620.32 280 L 620.32 20 A 20 20 0 0 0 600 0 Z"); */
+    /* clip-path: path("M 20 0 A 20 20 0 0 0 0 20 L 0 352 A 20 20 0 0 0 21 372.17 L 490 372.2 A 10 10 0 0 0 500 366 A 15 15 0 0 1 616 280 A 10 10 0 0 0 620.32 270 L 620.32 20 A 20 20 0 0 0 600 0 Z"); */
+    /* clip-path: path("M 20 0 A 20 20 0 0 0 0 20 L 0 352 A 20 20 0 0 0 21 372.17 L 490 372.2 A 10 10 0 0 0 500 366 A 20 20 0 0 1 616 280 A 10 10 0 0 0 620.32 270 L 620.32 20 A 20 20 0 0 0 600 0 Z"); */
+    /* clip-path: path("M 20 0 A 20 20 0 0 0 0 20 L 0 352 A 20 20 0 0 0 21 372.17 L 490 372.2 A 10 10 0 0 0 500 366 A 20 20 0 0 1 616 285 A 35 35 0 0 1 651 285 A 10 10 0 0 0 620.32 270 L 620.32 20 A 20 20 0 0 0 600 0 Z"); */
+    /* clip-path: path("M 20 0 A 20 20 0 0 0 0 20 L 0 352 A 20 20 0 0 0 21 372.17 L 494 372.2 A 20 20 0 0 0 515.044 352.087 L 515.012 305.908 A 20 20 0 0 1 534.914 284.059 L 600 284 A 20 20 0 0 0 620.32 265 L 620.32 20 A 20 20 0 0 0 600 0 Z"); */
+}
+
+/* .circle-btn {
+  position: absolute;
+  display: flex;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #000;
+  right: 20px;
+  bottom: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.up-right-arrow {
+    position: absolute;
+    top: 20px;
+    color: white;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    display: block;
+}
+
+.up-right-arrow {
+    width: 100%;
+    height: 100%;
+} */
+
+.abt-counter {
+    position: relative;
+    background-color: white;
+    /* border: 2px solid brown; */
+    grid-column: span 2;
+}
+
+.counter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.counter div {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.counter div i {
+    font-size: 70px;
+    color: #333;
+}
