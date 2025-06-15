@@ -28,12 +28,15 @@ document.querySelectorAll('.video-box').forEach(box => {
 
 
 const counter = document.getElementById("years");
-const project = document.getElementById("projects");
+const project = document.getElementById("completion");
 const customer = document.getElementById("customers");
+const copyYear = document.getElementById("copy-right-year")
 const startYear = 2015;
 const currentYear = new Date().getFullYear();
 const yearsPassed = currentYear - startYear;
 const projectTarget = 25;
+
+copyYear.textContent = `${currentYear}`
 
 // animation
 
