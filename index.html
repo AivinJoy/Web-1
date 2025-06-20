@@ -5,230 +5,275 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>In House Theory</title>
     <link rel="stylesheet" href = "styles.css"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"/>
 
 </head>
 <body>
     <div class="container">
-        <header class="navbar">
-            <div class="info-left">
-                <div class="company-logo">
-                    <img src="./images/Letter Logo_02.svg" alt="in-house-theory" >
+        <div class="hero-grid-container">
+            <header class="navbar">
+                <div class="info-left">
+                    <div class="company-logo">
+                        <img src="./images/Letter Logo_02.svg" alt="in-house-theory" >
+                    </div>
+                    <div class="company-name">
+                        <div class="company-font"><p>In House Theory</p></div>
+                    </div>
                 </div>
-                <div class="company-name">
-                    <div class="company-font"><p>In House Theory</p></div>
-                </div>
-            </div>    
-            <nav class="nav-links">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about-us">About Us</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
-                </ul>    
-            </nav>    
-        </header> 
-        <main> 
-            <section id="home" class="landing-page">     
-                <div class="hero-content">
-                    <div class="hero-image">
-                        <div class="img-wrapper">
-                            <img src="./images/2016_02_26_MS_EU03_01_ND.webp" alt="living_room">
+                <label for="menu-toggle" class="hamburger">
+                    <input type="checkbox" id="menu-toggle">
+                    <svg viewBox="0 0 32 32">
+                    <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                    <path class="line" d="M7 16 27 16"></path>
+                    </svg>
+                </label>    
+                <nav class="nav-container">
+                    <ul class="nav-links">
+                        <li class="nav-item active"><a href="#home">Home</a></li>
+                        <li class="nav-item"><a href="#about-us">About Us</a></li>
+                        <li class="nav-item"><a href="#projects">Projects</a></li>
+                        <li class="nav-item"><a href="#contact-us">Contact Us</a></li>
+                        <span class="indicator"></span>
+                    </ul>    
+                </nav>    
+            </header> 
+            <main> 
+                <section id="home" class="landing-page">     
+                    <div class="hero-content">
+                        <div class="hero-image">
+                            <div class="img-wrapper">
+                                <!-- <img src="./images/2016_02_26_MS_EU03_01_ND.webp" alt="living_room"> -->
+                                 <picture>
+                                <!-- For mobile (≤ 600px) -->
+                               <source  media="(max-width: 600px)" srcset= "https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 388w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 688w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=776&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 776w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 988w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1288w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1376w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=1588&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1588w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1888w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1976w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=2188&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2188w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=2488&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2488w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=2576&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2576w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=2788&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2788w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3088w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=3176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3176w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3388w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=3495&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3495w">
+                               <source  media="(min-width: 601px) and (max-width: 1024px)" srcset= "https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 388w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 688w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=776&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 776w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 988w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1288w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1376w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=1588&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1588w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1888w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1976w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=2188&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2188w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=2488&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2488w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=2576&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2576w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=2788&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2788w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3088w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=3176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3176w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3388w, https://images.unsplash.com/photo-1608626597747-0d9b8884972c?q=80&w=3495&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3495w">
+
+                                <!-- Default image (for tablets, laptops, desktops) -->
+                                <img src="./images/2016_02_26_MS_EU03_01_ND.webp" alt="living-room">
+                                </picture>
+                            </div>
+                            <!-- <div class="title">
+                                <h1 class="main-title">In<br>House<br>Theory</h1>
+                            </div> -->
+                            <a class="button-link" href="tel:+91 77608 13865">
+                            <button class="enquiry">
+                              <div class="svg-wrapper-1">
+                                <div class="svg-wrapper">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="32" viewBox="0 0 32 32" height="32" fill="none" class="svg-icon"><path stroke-width="2" stroke-linecap="round" stroke="#fff" fill-rule="evenodd" d="m24.8868 19.1288c-1.0274-.1308-2.036-.3815-3.0052-.7467-.7878-.29-1.6724-.1034-2.276.48-.797.8075-2.0493.9936-2.9664.3258-1.4484-1.055-2.7233-2.3295-3.7783-3.7776-.6681-.9168-.4819-2.1691.3255-2.9659.5728-.6019.7584-1.4748.4802-2.2577-.3987-.98875-.6792-2.02109-.8358-3.07557-.2043-1.03534-1.1138-1.7807-2.1694-1.77778h-3.18289c-.60654-.00074-1.18614.25037-1.60035.69334-.40152.44503-.59539 1.03943-.53345 1.63555.344 3.31056 1.47164 6.49166 3.28961 9.27986 1.64878 2.5904 3.84608 4.7872 6.43688 6.4356 2.7927 1.797 5.9636 2.9227 9.2644 3.289h.1778c.5409.0036 1.0626-.2 1.4581-.569.444-.406.6957-.9806.6935-1.5822v-3.1821c.0429-1.0763-.7171-2.0185-1.7782-2.2046z" clip-rule="evenodd"></path></svg>
+                                </div>
+                              </div>
+                              <span>For Enquiry</span>
+                            </button>
+                            </a>
+                            <div class="hero-heading">   
+                                <h1 class="sub-title">Contemporary</h1>
+                            </div>     
                         </div>    
-                            <h1 class="hero-heading">Contemporary</h1>
-                    </div>    
-                    <div class="bottom-left">
-                        <div class="info-box">
-                            <p>Crafting spaces that harmonize modern aesthetics with timeless elegance,our contemporary interior designs breathe life into every room, redefining the essence of chic living.</p>
+                        <div class="bottom-left">
+                            <div class="info-box">
+                                <p>Crafting spaces that harmonize modern aesthetics with timeless elegance,our contemporary interior designs breathe life into every room, redefining the essence of chic living.</p>
+                            </div>
+                            <a href="https://www.instagram.com/reel/DKpPGIhpp4m/?igsh=MTExcjc0eXNvaWQxbw==" target="_blank" class="video-link">
+                                <div class="video-box">
+                                    <video class="preview-video" muted playsinline loop preload="metadata">
+                                        <source src="./images/INhouse _.mp4" type="video/mp4"/>
+                                    </video>
+                                    <div class="play-icon">
+                                        <i class="hgi-stroke hgi-play"></i>
+                                    </div>
+                                </div>
+                            </a> 
+                        </div>    
+                        <!-- <div class="bottom-right">
+                            <img src="./images/Letter Logo_02.svg" alt="company-logo">
+                        </div> -->
+                    </div>
+                </section>
+        </div>        
+                <section id="about-us" class="abt-us">
+                    <div class="abt-container">
+                        <div class="abt-img">
+                            <div class="living-room block">
+                                <img src="./images/2016_04_21_PRESTIGE_SHANTINIKETHAN_1431_LR1_C1_ND_LR.webp" alt="living-room">
+                                <!-- <div class="grid-overlay"></div> -->
+                            </div>
+                            <div class="btn-look block">
+                                <p>Gorgeous Interior</p>
+                            </div>
+                            <div class="abt-heading1 block">
+                                <h2>Modern</h2>
+                            </div>
+                            <div class="abt-heading2 block">
+                                <h2>Minimalist</h2>
+                            </div>
                         </div>
-                        <a href="https://www.instagram.com/reel/DKpPGIhpp4m/?igsh=MTExcjc0eXNvaWQxbw==" target="_blank" class="video-link">
-                            <div class="video-box">
-                                <video class="preview-video" muted playsinline loop preload="metadata">
-                                    <source src="./images/INhouse _.mp4" type="video/mp4"/>
-                                </video>
-                                <div class="play-icon">
-                                    <i class="hgi-stroke hgi-play"></i>
+                        <div class="abt-info block">
+                            <div class="abt-cont1">
+                                <p>Aesthetic</p>
+                            </div>
+                            <div class="abt-cont2">
+                                <p>Aesthetic furniture where every<br>piece tells a a story of style </p>
+                            </div>
+                            <div class="abt-cont3">
+                                <h2>Into a gallery<br>of elegance</h2>
+                            </div>
+                        </div>
+                        <div class="abt2img">
+                            <div class="outdoor block">
+                                <img src="./images/07_24_BN01_ND.webp" alt="">
+                            </div>
+                            <!-- <button class="circle-btn">
+                                <div class="up-right-arrow">
+                                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/up-right-arrow.png" alt="up-right-arrow"/>
+                                </div>    
+                            </button>     -->
+                        </div>
+                        <div class="abt-counter">
+                            <div class="counter">
+                                <div class="years-of-trust block">
+                                    <i class="fa-regular fa-handshake"></i>
+                                    <h2>Years Of Trust</h2>
+                                    <h2 id="years" class="number"><h2>
+                                </div>
+                                <div class="projects-completed block">
+                                    <i class="hgi hgi-stroke hgi-document-validation"></i>
+                                    <h2>Projects Completed</h2>
+                                    <h2 id="completion" class="number"></h2>
+                                </div>
+                                <div class="satisfied-cust block">
+                                    <i class="hgi hgi-stroke hgi-checkmark-badge-03"></i>
+                                    <h2>Satisfied Customers</h2>
+                                    <h2 id="customers" class="number"></h2>
                                 </div>
                             </div>
-                        </a> 
-                    </div>    
-                    <!-- <div class="bottom-right">
-                        <img src="./images/Letter Logo_02.svg" alt="company-logo">
-                    </div> -->
-                </div>
-            </section>
-            <section id="about-us" class="abt-us">
-                <div class="abt-container">
-                    <div class="abt-img">
-                        <div class="living-room">
-                            <img src="./images/2016_04_21_PRESTIGE_SHANTINIKETHAN_1431_LR1_C1_ND_LR.webp" alt="living-room">
-                            <!-- <div class="grid-overlay"></div> -->
-                        </div>
-                        <div class="btn-look">
-                            <p>Gorgeous Interior</p>
-                        </div>
-                        <div class="abt-heading1">
-                            <h2>Modern</h2>
-                        </div>
-                        <div class="abt-heading2">
-                            <h2>Minimalist</h2>
                         </div>
                     </div>
-                    <div class="abt-info">
-                        <div class="abt-cont1">
-                            Aesthetic
+                    <div class="abt2-container">
+                        <div class="abt2-img-wrapper block">
+                            <img src="./images/kam-idris-_HqHX3LBN18-unsplash.webp" alt="">
                         </div>
-                        <div class="abt-cont2">
-                            <p>Aesthetic furniture where every<br>piece tells a a story of style </p>
-                        </div>
-                        <div class="abt-cont3">
-                            <h2>Into a gallery<br>of elegance</h2>
+                        <div class="abt2-content">
+                            <div class="abt2-info block">
+                                <P>Elegance . Timeless</P>
+                            </div>
+                            <div class="abt2head block">
+                                <h3>Modern Style<br>Timeless Charm</h3>
+                            </div>
+                            <div class="abt2-info2 block">
+                                <p>Step into our lates design experience — where bespoke interiors meet thoughtful living.<br>From full home transformations and stylish kitchens to inviting living rooms,<br>our curated selection of sofas, chairs, armchairs, and statement furniture is crafted<br>to reflect elegance, function, and individual style.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="abt2img">
-                        <div class="outdoor">
-                            <img src="./images/07_24_BN01_ND.webp" alt="">
-                        </div>
-                        <!-- <button class="circle-btn">
-                            <div class="up-right-arrow">
-                                <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/up-right-arrow.png" alt="up-right-arrow"/>
+                </section>
+                <section id="projects" class="designs">
+                    <div class="showcase">
+                        <div class="showcase-heading">
+                            <div class="showcase-head-content block">
+                                <h2>Explore Our<span class="line-break"> Proudly Collection</span></h2>
+                            </div>
+                            <div class="showcase-head-info block">
+                                <p>In House Theory will showcase its vision of contemporary<br>architechture, interior design trends, and innovative<br>living of solone del Mobile.</p>
                             </div>    
-                        </button>     -->
-                    </div>
-                    <div class="abt-counter">
-                        <div class="counter">
-                            <div class="years-of-trust">
-                                <i class="fa-regular fa-handshake"></i>
-                                <h2>Years Of Trust</h2>
-                                <h2 id="years" class="number"><h2>
+                        </div>
+                        <!-- <div class="gallery-1">
+                            <div class="art-1">
+                                <img src="./images/09_11_BN02_ND.webp" alt="living-room">
                             </div>
-                            <div class="projects-completed">
-                                <i class="hgi hgi-stroke hgi-document-validation"></i>
-                                <h2>Projects Completed</h2>
-                                <h2 id="completion" class="number"></h2>
-                                <P></P>
-                            </div>
-                            <div class="satisfied-cust">
-                                <i class="hgi hgi-stroke hgi-checkmark-badge-03"></i>
-                                <h2>Satisfied Customers</h2>
-                                <h2 id="customers" class="number"></h2>
+                        </div> -->
+                        <!-- <div class="gallery-2">
+                            <div class="art-1">
+                                <img src="./images/pexels-huy-phan-316220-2826787.webp" alt="living-room">
                             </div>
                         </div>
+                        <div class="gallery-3">
+                              <div class="art-1">
+                                <img src="./images/2016_04_21_PRESTIGE_SHANTINIKETHAN_1431_KT1_C2_ND.webp" alt="kitchen">
+                            </div>
+                        </div>
+                        <div class="gallery-4">
+                             <div class="art-1">
+                                <img src="/images/2016_04_21_PRESTIGE_SHANTINIKETHAN_1431_MBR1_C1_ND.webp" alt="bedroom">
+                            </div>
+                        </div>
+                        <div class="gallery-5">
+                             <div class="art-1">
+                                <img src="./images/adam-winger-PCDlE94JjcI-unsplash.webp" alt="hall">
+                            </div>
+                        </div>
+                        <div class="gallery-6">
+                             <div class="art-1">
+                                <img src="./images/chairs-2181947_1280.webp" alt="dining-room">
+                            </div>
+                        </div> -->
                     </div>
-                </div>
-                <div class="abt2-container">
-                    <div class="abt2-img-wrapper">
-                        <img src="./images/kam-idris-_HqHX3LBN18-unsplash.webp" alt="">
+                    <div class="gallery">
+                            <img src="./images/09_11_BN02_ND.webp" class="block" alt="living-room">
+                            <img src="./images/pexels-huy-phan-316220-2826787.webp" class="block" alt="living-room">
+                            <img src="./images/2016_04_21_PRESTIGE_SHANTINIKETHAN_1431_KT1_C2_ND.webp" class="block" alt="kitchen">
+                            <img src="/images/2016_04_21_PRESTIGE_SHANTINIKETHAN_1431_MBR1_C1_ND.webp" class="block" alt="bedroom">
+                            <img src="./images/adam-winger-PCDlE94JjcI-unsplash.webp" class="block" alt="hall"> 
+                            <img src="./images/chairs-2181947_1280.webp" class="block" alt="dining-room">
                     </div>
-                    <div class="abt2-content">
-                        <div class="abt2-info">
-                            <P>Elegance . Timeless</P>
+                </section>
+            </main>
+            <footer>
+                <section id="contact-us" class="foot">
+                    <div class="footer-contact">
+                        <div class="footer-content1">
+                            <div class="footer-heading">
+                                <h2>Engage with Us in <span class="line-break">Converstaion</span></h2>
+                            </div>
+                            <div class="footer-info">
+                                <p>In a global based on communication,a brand must look beyond its borders,<br>open up to new experiences, and dare to be different.Meeting the brightest<br>minds of one's time is the most effective way to nurture creativity.</p>
+                            </div>
+                            <div class="socials">
+                                <a href="https://wa.me/9177608 13865" target="_blank" rel="noopener"> 
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                                <a href="https://www.instagram.com/inhousetheory" target="_blank" rel="noopener">   
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a> 
+                                <a href="https://www.linkedin.com/in/in-house-theory" target="_blank" rel="noopener">    
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/in-house-theory" target="_blank" rel="noopener">    
+                                   <i class="fa-solid fa-envelope"></i>
+                                </a>    
+                            </div>
                         </div>
-                        <div class="abt2head">
-                            <h3>Modern Style<br>Timeless Charm</h3>
+                        <div class="footer-content2">
+                            <div class="footer-image">
+                                <img src="./images/Letter Logo_02.svg" alt="chair">
+                            </div>
+                            <div class="footer-heading2">
+                                <h2>In House Theory</h2>
+                            </div>
+                            <div class="footer-copy">
+                                <p>&copy;<span id="copy-right-year"></span>&nbsp;In House Theory.  All rights reserved</p>
+                            </div>
                         </div>
-                        <div class="abt2-info2">
-                            <p>Step into our lates design experience — where bespoke interiors meet thoughtful living.<br>From full home transformations and stylish kitchens to inviting living rooms,<br>our curated selection of sofas, chairs, armchairs, and statement furniture is crafted<br>to reflect elegance, function, and individual style.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="projects" class="designs">
-                <div class="showcase">
-                    <div class="showcase-heading">
-                        <div class="showcase-head-content">
-                            <h2>Explore Our<br>Proudly Collection</h2>
-                        </div>
-                        <div class="showcase-head-info">
-                            <p>In House Theory will showcase its vision of contemporary<br>architechture, interior design trends, and innovative<br>living of solone del Mobile</p>
-                        </div>    
-                    </div>
-                    <div class="gallery-1">
-                        <div class="art-1">
-                            <img src="./images/09_11_BN02_ND.webp" alt="living-room">
-                        </div>
-                    </div>
-                    <div class="gallery-2">
-                        <div class="art-1">
-                            <img src="./images/pexels-huy-phan-316220-2826787.webp" alt="living-room">
-                        </div>
-                    </div>
-                    <div class="gallery-3">
-                          <div class="art-1">
-                            <img src="./images/2016_04_21_PRESTIGE_SHANTINIKETHAN_1431_KT1_C2_ND.webp" alt="kitchen">
-                        </div>
-                    </div>
-                    <div class="gallery-4">
-                         <div class="art-1">
-                            <img src="/images/2016_04_21_PRESTIGE_SHANTINIKETHAN_1431_MBR1_C1_ND.webp" alt="bedroom">
-                        </div>
-                    </div>
-                    <div class="gallery-5">
-                         <div class="art-1">
-                            <img src="./images/adam-winger-PCDlE94JjcI-unsplash.webp" alt="hall">
-                        </div>
-                    </div>
-                    <div class="gallery-6">
-                         <div class="art-1">
-                            <img src="./images/chairs-2181947_1280.webp" alt="dining-room">
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <section id="contact-us" class="foot">
-                <div class="footer-contact">
-                    <div class="footer-content1">
-                        <div class="footer-heading">
-                            <h2>Engage with Us in <br>Converstaion</h2>
-                        </div>
-                        <div class="footer-info">
-                            <p>In a global based on communication,a brand must look beyond its borders,<br>open up to new experiences, and dare to be different.Meeting the brightest<br>minds of one's time is the most effective way to nurture creativity.</p>
-                        </div>
-                        <div class="socials">
-                            <a href="https://wa.me/9177608 13865" target="_blank" rel="noopener"> 
+                        <!-- <div class="social-media">
+                             <div class="socials">
                                 <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                            <a href="https://www.instagram.com/inhousetheory" target="_blank" rel="noopener">   
                                 <i class="fa-brands fa-instagram"></i>
-                            </a> 
-                            <a href="https://www.linkedin.com/in/in-house-theory" target="_blank" rel="noopener">    
                                 <i class="fa-brands fa-linkedin-in"></i>
-                            </a>    
+                            </div> 
+                             <div class="footer-heading2">
+                                <h2>In<br>House<br>Theory</h2>
+                            </div> 
                         </div>
+                        <div class="company-heading">
+                            <div class="footer-heading2">
+                                <h2>In<br>House<br>Theory</h2>
+                            </div>
+                        </div>  -->
                     </div>
-                    <div class="footer-content2">
-                        <div class="footer-image">
-                            <img src="./images/Letter Logo_02.svg" alt="chair">
-                        </div>
-                        <div class="footer-heading2">
-                            <h2>In House Theory</h2>
-                        </div>
-                        <div class="footer-copy">
-                            <p>&copy;<span id="copy-right-year"></span>&nbsp;In House Theory.  All rights reserved</p>
-                        </div>
-                    </div>
-                    <!-- <div class="social-media">
-                         <div class="socials">
-                            <i class="fa-brands fa-whatsapp"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </div> 
-                         <div class="footer-heading2">
-                            <h2>In<br>House<br>Theory</h2>
-                        </div> 
-                    </div>
-                    <div class="company-heading">
-                        <div class="footer-heading2">
-                            <h2>In<br>House<br>Theory</h2>
-                        </div>
-                    </div>  -->
-                </div>
-            </section>
-        </footer>     
+                </section>
+            </footer>     
     </div>
 <script src="script.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 </body>
 </html>
