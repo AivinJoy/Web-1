@@ -3,13 +3,13 @@ document.querySelectorAll('.video-box').forEach(box => {
 
     let hasStarted = false;
 
-    box.addEventListener('mouseenter', () => {
+    box.addEventListener('pointerenter', () => {
         video.currentTime = 0;
         video.play();
         hasStarted = true;
     });
 
-    box.addEventListener('mouseleave', () => {
+    box.addEventListener('pointerleave', () => {
         video.pause();
         hasStarted = false;
     });
@@ -38,7 +38,7 @@ const projectTarget = 25;
 copyYear.textContent = `${currentYear}`
 
 // animation
-
+function startCounterAnimation() {
 let count1 = 0;
 let count2 = 0;
 const speed = 150;
@@ -58,6 +58,7 @@ const interval = setInterval(() => {
         clearInterval(interval);
     }
 },speed);
+}
 
 // Scroll Animation using GSAP
 document.addEventListener("DOMContentLoaded", function() {
@@ -73,11 +74,17 @@ gsap.utils.toArray(".block").forEach((el) => {
         },
         opacity: 0,
         scale: 0.5,
-        duration: 1,
+        duration: 0.8,
         ease: "power2.out",
-        stagger: 0.2,
+        transformOrigin: "center center"
         });
     });
+});
+
+ScrollTrigger.create({
+    trigger:".abt-counter",
+    once: true,
+    onEnter: () => startCounterAnimation()
 });
 
 // context transition
@@ -114,11 +121,16 @@ const indicator = document.querySelector('.indicator');
 const updateIndicator = () => {
     const activeItem = document.querySelector('.nav-item.active');
     if(!activeItem) return;
-    const { offsetTop, offsetHeight } = activeItem;
+
+    const offsetTop = activeItem.offsetTop;
+    const offsetHeight = activeItem.offsetHeight;
     const indicatorHeight = indicator.offsetHeight;
-    const centeredTop = offsetTop + (offsetHeight - indicatorHeight)/2 ;
-    indicator.style.top = `${centeredTop}px`;
-};
+    const centeredTop = offsetTop + (offsetHeight - indicatorHeight)/2;
+
+    requestAnimationFrame(() => {
+        indicator.style.top = `${centeredTop}px`;
+    });
+};    
 
 // toggle function
 

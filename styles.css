@@ -1,4 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+
+/* @font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/...) format('woff2');
+  font-display: swap;
+} */
+
+
 
 :root{
     --bg-color: #393E46;
@@ -19,10 +30,33 @@ html, body{
     background-color: var(--bg-color);
     overflow-x: hidden;
     scroll-behavior: smooth;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    margin: 0;
 }
+
+@supports(padding: env(safe-area-inset-bottom)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+  }
+}
+
+.footer {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+}
+
 
 .container{
     position: relative;
+}
+
+.block {
+    will-change: transform, opacity;
 }
 
 /* .navbar{
@@ -274,7 +308,7 @@ html, body{
 
 .company-logo img {
     height: 65px;
-    width: auto;
+    width: 65px;
     display: block;
 }
 
@@ -347,10 +381,19 @@ html, body{
     border-radius: 20px;
 }
 
+:where(h1) {
+  margin-block: 0.67em;
+  font-size: 2em;
+}
+
+.landing-page h1 {
+    font-size: clamp(50px, 5vw, 200px);
+}
+
 .hero-heading {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
-    font-size: clamp(30px, 5vw, 100px);
+    
     position: absolute;
     top: 40%;
     left: 50%;
@@ -360,6 +403,10 @@ html, body{
     text-align: center;
     z-index: 2;
 }
+
+/* section h1 {
+    font-size: 100px
+} */
 
 /* .title {
     font-family: "Montserrat", sans-serif;
@@ -382,17 +429,17 @@ html, body{
     transform: translate(-50%, -50%); 
 } */
 
-.sub-title {
-    position: absolute; /* Position it absolutely */
-    top: 50%; /* Adjust this value to position it below the main title */
+/* .sub-title {
+    position: absolute;
+    top: 50%; 
     left: 50%;
-    transform: translate(-50%, -50%); /* Center it horizontally */
-    opacity: 1; /* Initially hidden */
-}
+    transform: translate(-50%, -50%);
+    opacity: 1; 
+} */
 
 /* Button */
 
-button {
+.button {
   font-family: "Roboto", sans-serif;
   position: absolute;
   font-size: 15px;
@@ -412,30 +459,30 @@ button {
   transition: all 0.3s;
 }
 
-button:hover {
+.button:hover {
   transform: translateY(-3px);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-button:active {
+.button:active {
   transform: scale(0.95);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-button span {
+.button span {
   display: block;
   margin-left: 0.4em;
   transition: all 0.3s;
 }
 
-button svg {
+.button svg {
   width: 16px;
   height: 16px;
   fill: white;
   transition: all 0.3s;
 }
 
-button .svg-wrapper {
+.button .svg-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -447,17 +494,17 @@ button .svg-wrapper {
   transition: all 0.3s;
 }
 
-button:hover .svg-wrapper {
+.button:hover .svg-wrapper {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-button:hover svg {
+.button:hover svg {
   transform: rotate(360deg);
 }
 
-.button-link {
+.button {
       text-decoration: none;
-      color: inherit;
+      color: var(--text-color);
 }
 
 /* Content */
@@ -514,10 +561,14 @@ button:hover svg {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3rem;
-    color: white;
     opacity: 0.8;
     transition: opacity 0.3s ease;
     pointer-events: auto;
+}
+
+.play-icon svg {
+    height: 32px;
+    width: 32px;
 }
 
 .video-box:hover .preview-video{
@@ -793,10 +844,16 @@ button:hover svg {
     gap: 10px;
 }
 
-.counter div i {
-    font-size: 70px;
+.counter div svg {
+    height: 70px;
+    width: 70px;
     color: white;
 }
+
+/* .counter div i {
+    color: white;
+    font-size: 70px;
+} */
 
 .abt2-container {
     position: relative;
@@ -1094,12 +1151,11 @@ button:hover svg {
     text-decoration: none;
 }
 
-.socials a i {
+.icon-wrapper {
     display: flex;
-    font-size: 25px;
-    height: 40px;
-    width: 40px;
-    color: white;
+    /* font-size: 25px; */
+    height: 35px;
+    width: 35px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -1107,7 +1163,14 @@ button:hover svg {
     transition: 0.3s ease;
 }
 
-.socials a i:hover {
+.icon-wrapper svg {
+    height: 25px;
+    width: 25px;
+    color: white;
+    fill: white;
+}
+
+.icon-wrapper:hover {
     color: white;
     background-color: var(--border-color);
 }
@@ -1243,6 +1306,11 @@ button:hover svg {
     .hero-grid-container {
         padding: 0;
         
+    }
+
+    :where(h1) {
+      font-size: 2em;
+      margin-block: 0.67em;
     }
 
     .hero-heading {
@@ -1514,5 +1582,53 @@ button:hover svg {
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
+    .living-room {
+        /* clip-path: path("M 10 0 A 10 28 0 0 0 0 28 L 0 490 A 10 28 0 0 0 9 520 L 142 520 A 10 28 0 0 1 152 548 L 152 640 A 10 28 0 0 0 162 668 L 176 668 A 10 28 0 0 1 186 696 L 186 748 A 10 28 0 0 0 196 776 L 218 776 A 10 28 0 0 1 228 804 L 228 860 A 10 28 0 0 0 238 888 L 625 888 A 10 28 0 0 0 635 860 L 635 28 A 10 28 0 0 0 625 0 Z"); */
+        /* clip-path: path("M 20 0 A 20 20 0 0 0 0 20 L 0 600 A 20 20 0 0 0 20 620 L 130 620 A 20 20 0 0 1 152 640 L 152 650 A 20 20 0 0 0 167 668 L 176 668 A 20 20 0 0 1 186 687 L 186 756 A 20 20 0 0 0 201 776 L 220 776 A 20 20 0 0 1 228 791 L 228 870 A 20 20 0 0 0 243 888 L 615 888 A 20 20 0 0 0 635 870 L 635 20 A 20 20 0 0 0 615 0 Z"); */
+        clip-path: path("M 20 0 A 20 20 0 0 0 0 20 L 0 660 A 20 20 0 0 0 20 680 L 130 680 A 20 20 0 0 1 152 700 L 152 730 A 20 20 0 0 0 167 748 L 176 748 A 20 20 0 0 1 186 767 L 186 800 A 20 20 0 0 0 201 820 L 220 820 A 20 20 0 0 1 228 840 L 228 873 A 20 20 0 0 0 245 889 L 615 888 A 20 20 0 0 0 635 870 L 635 20 A 20 20 0 0 0 615 0 Z");
+    }
 
+    .btn-look {
+        font-size: 16px;
+        height: 45px;
+        max-width: 200px;
+        padding: 3px 6px;
+        left: 0px;
+    }
+
+    .abt-heading1, .abt-heading2 {
+        font-size: 28px;
+        left: 0;
+    }
+
+    .abt-heading1 {
+        bottom: 85px;
+    }
+
+    .abt-cont3 {
+        top: 250px;
+        margin: 0;
+        left: 40px;
+        font-size: 28px;
+    }
+
+    .showcase-head-info {
+        max-width: 400px;
+        font-size: 20px;
+    }
+
+    .footer-content2 {
+        display: flexbox;
+        flex-direction: column;
+    }
+
+    .footer-image {
+        height: 150px;
+        width: 150px;
+        top: 12%;
+    }
+
+    .footer-heading2 {
+        top: 55%;
+    }
 }
